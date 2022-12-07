@@ -93,6 +93,9 @@ namespace Exe4_033
                         }
                         s.pop();
                         break;
+                    case '3':
+                        s.display();
+                        break;
                     
                 }
             }
