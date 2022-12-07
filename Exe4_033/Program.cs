@@ -16,4 +16,10 @@ namespace Exe4_033
             next = n;
         }
     }
+
+    class Stacks
+    {
+
+        
+    }
 }
