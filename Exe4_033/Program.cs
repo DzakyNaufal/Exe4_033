@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,6 +41,12 @@ namespace Exe4_033
             fresh.next = top;
             top = fresh;
             Console.WriteLine("\n" + element + " pushed.");
+        }
+
+        public void pop()
+        {
+            Console.WriteLine("\nThe popped elements is: " + top.info);
+            top = top.next; 
         }
     }
 }
