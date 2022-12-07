@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Exe4_033
 {
-    internal class Program
+    class Node
     {
-        static void Main(string[] args)
+        public int info;
+        public Node next;
+        public Node (int i, Node n)
         {
+            info = i;
+            next = n;
         }
     }
 }
