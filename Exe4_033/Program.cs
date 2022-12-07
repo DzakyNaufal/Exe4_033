@@ -48,5 +48,21 @@ namespace Exe4_033
             Console.WriteLine("\nThe popped elements is: " + top.info);
             top = top.next; 
         }
+
+        public void display()
+        {
+            Node tmp;
+
+            if (empty())
+                Console.WriteLine("\nStack Empty");
+            else
+            {
+                for (tmp = top; tmp != null; tmp = tmp.next)
+                {
+                    Console.WriteLine(tmp.info);
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
