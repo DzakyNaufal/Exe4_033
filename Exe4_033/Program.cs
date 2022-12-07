@@ -9,8 +9,11 @@ namespace Exe4_033
 {
     class Node
     {
+        
         public int info;
         public Node next;
+        
+
         public Node (int i, Node n)
         {
             info = i;
@@ -20,7 +23,10 @@ namespace Exe4_033
 
     class Stacks
     {
+        private int[] dzaky = new int [51];
+        private int n;
         Node top;
+       
         public Stacks()
         {
             top = null;
@@ -35,12 +41,34 @@ namespace Exe4_033
         }
         public void push(int element)
         {
+
             Node fresh;
             fresh = new Node(element, null);
 
             fresh.next = top;
             top = fresh;
             Console.WriteLine("\n" + element + " pushed.");
+
+            void input()
+            {
+                while (true)
+                {
+                    Console.Write("Enter a number: ");
+                    string s = Console.ReadLine();
+                    n = Int32.Parse(s);
+                    if (n <= 51)
+                        break;
+                    else
+                        Console.WriteLine("\nThe maximun number of data is 55 elements \n");
+                }
+
+                for (int i = 0; i < n; i++)
+                {
+                    Console.Write("<" + (i + 1) + ">");
+                    string s1 = Console.ReadLine();
+                    dzaky[i] = Int32.Parse(s1);
+                }
+            }
         }
 
         public void pop()
@@ -81,7 +109,7 @@ namespace Exe4_033
                 switch (ch)
                 {
                     case '1':
-                        Console.WriteLine("\nEnter a number: ");
+                        Console.WriteLine("\nEnter a number: ");                     
                         int num = Convert.ToInt32(Console.ReadLine());
                         s.push(num);
                         break;
@@ -98,7 +126,7 @@ namespace Exe4_033
                         break;
                     case '4':
                         return;
-                    default;
+                    default:
                         Console.WriteLine("\nInvalid Choise");
                         break;
                 }
