@@ -64,5 +64,9 @@ namespace Exe4_033
                 Console.WriteLine();
             }
         }
+        static void Main(string[] args)
+        {
+            
+        }
     }
 }
